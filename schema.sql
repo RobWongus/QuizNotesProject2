@@ -1,3 +1,13 @@
 -- Schema
-DROP DATABASE IF EXISTS passport_demo;
-CREATE DATABASE passport_demo;
+DROP DATABASE IF EXISTS flashcard_db;
+CREATE DATABASE flashcard_db;
+USE flashcard_db;
+
+CREATE TABLE cards (
+id INTEGER AUTO_INCREMENT,
+Category VARCHAR (50) NOT NULL,
+Question VARCHAR (50) NOT NULL,
+Answer VARCHAR (50) NOT NULL
+PRIMARY KEY (id) 
+FOREIGN KEY (PersonID) REFERENCES Persons(PersonID)
+);
