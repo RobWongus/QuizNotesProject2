@@ -5,9 +5,9 @@ USE flashcard_db;
 
 CREATE TABLE cards (
 id INTEGER AUTO_INCREMENT,
-Category INTEGER (50) NOT NULL,
-Question VARCHAR (50) NOT NULL,
-Answer VARCHAR (50) NOT NULL,
+category INTEGER (50) NOT NULL,
+question VARCHAR (50) NOT NULL,
+answer VARCHAR (50) NOT NULL,
 PRIMARY KEY (id) 
 );
 
