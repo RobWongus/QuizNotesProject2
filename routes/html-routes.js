@@ -28,4 +28,10 @@ module.exports = function(app) {
     res.render(path.join(__dirname, "../views/members"), {});
   });
 
+  app.get("/create", function(req, res) {
+    // If the user already has an account send them to the members page
+    
+    res.render(path.join(__dirname, "../views/create"), {});
+  });
+
 };
