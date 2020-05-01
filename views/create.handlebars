@@ -1,0 +1,57 @@
+{{!-- navbar with name, sign in/out stuff --}}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand justify-content-center" href="#">FlashCarder</a>
+</nav>
+
+
+ 
+{{!-- dropdown for categories --}}
+<div class="container">
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select a Category
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    {{!-- these are going to have to dynamically change based on the number of categories in the category table --}}
+                    {{!-- Going to need a class to trigger the  selected category to pull from the API--}}
+                    {{!-- this'll need a {{#each block}} to create a link, so we're going to need a dropdown partial --}}
+                    
+                    {{!-- {{#each category}} --}}
+                        <a class="dropdown-item" href="#">Category1</a>
+                        <a class="dropdown-item" href="#">Category2</a>
+                        <a class="dropdown-item" href="#">Category3</a>
+                    {{!-- {{/each}} --}}
+       
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{!-- card partials --}}
+
+    <div class="row">
+        <div class="col">
+            {{!-- need  {{#each}} to dynamically generate each card partial--}}
+            {{!-- need to set their layout to flex - once line fills up, move down to the next line --}}
+
+            {{!-- {{#each card}} --}}
+
+            {{!-- {{/each}} --}}
+        </div>
+    </div>
+
+
+
+
+</div>
+
+<footer id="sticky-footer" class="py-2 bg-dark text-light">
+    <div class="container text-center">
+            <p>Copyright &copy; Your Website</p>
+    </div>
+</footer>
+
+
+
