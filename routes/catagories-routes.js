@@ -20,19 +20,19 @@ module.exports = function(app){
          });
      });
 
-    // app.post("api/catagories", function(req, res){
-    //     db.Categories.create(req.body).then(function(dbCategories){
-    //         res.json(dbCategories);
-    //     })
-    // })
+    app.post("api/catagories", function(req, res){
+        db.Categories.create(req.body).then(function(dbCategories){
+            res.json(dbCategories);
+        })
+    })
 
-    // app.delete("/api/categories/:id", function(req, res){
-    //     db.Categories.destroy({
-    //         where: {
-    //             id: req.params.id
-    //         }
-    //     }).then(function(dbCategories){
-    //         res.json(dbCategories)
-    //     });
-    // });
+    app.delete("/api/categories/:id", function(req, res){
+        db.Categories.destroy({
+            where: {
+                id: req.params.id
+            }
+        }).then(function(dbCategories){
+            res.json(dbCategories)
+        });
+    });
 };
