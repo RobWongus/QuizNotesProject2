@@ -1,4 +1,25 @@
-form.signup,
-form.login {
-  margin-top: 50px;
+{
+  "development": {
+    "username": "akrncysslxy79b2v",
+    "password": "lek7uyjlluphvxs4",
+    "port": 3306,
+    "database": "e27tfzexux5zzp3a",
+    "host": "fnx6frzmhxw45qcb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "akrncysslxy79b2v@fnx6frzmhxw45qcb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "akrncysslxy79b2v@fnx6frzmhxw45qcb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "use_env_variable": "JAWSDB_URL",
+    "dialect": "mysql"
+  }
 }
