@@ -3,10 +3,32 @@
 <div class="col-3 m-2">
     <div class="card">
         <div class="card-body">
-            {{!-- need question from database --}}
-            <h5 class="card-title">{{question}}</h5> 
-            {{!-- need answer from database --}}
-            <p class="card-text">{{answer}}</p>
+            <h5 class="card-title">{{name}}</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="expand1">Expand</button>
         </div>
     </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <form>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">{{question}}</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">{{answer}}</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-Primary" data-dismiss="modal">Update</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
