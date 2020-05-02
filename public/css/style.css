@@ -3,3 +3,7 @@ form.login {
   margin-top: 50px;
 }
 
+#sticky-footer {
+  flex-shrink: none;
+}
+
