@@ -14,6 +14,14 @@ module.exports = function(app) {
     res.render(path.join(__dirname, "../views/signup"), {});
   });
 
+  app.get("/", function(req, res) {
+    // If the user already has an account send them to the members page
+    if (req.user) {
+      res.render(path.join(__dirname, "../views/members"), {});
+    }
+    res.render(path.join(__dirname, "../views/members"), {});
+  });
+
   app.get("/login", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
