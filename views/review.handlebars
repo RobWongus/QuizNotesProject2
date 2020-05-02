@@ -1,0 +1,133 @@
+{{!-- navbar with name, sign in/out stuff --}}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="place-content:center">
+  <a class="navbar-brand justify-content-center" href="#">FlashCarder</a>
+</nav>
+
+
+ 
+{{!-- dropdown for categories --}}
+<div class="container">
+    <div class="row mt-2">
+        <div class="col d-flex justify-content-center">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select a Category
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    {{!-- these are going to have to dynamically change based on the number of categories in the category table --}}
+                    {{!-- Going to need a class to trigger the  selected category to pull from the API--}}
+                    {{!-- this'll need a {{#each block}} to create a link, so we're going to need a dropdown partial --}}
+                    
+                    {{!-- {{#each category}} --}}
+                        <a class="dropdown-item" href="#">Category1</a>
+                        <a class="dropdown-item" href="#">Category2</a>
+                        <a class="dropdown-item" href="#">Category3</a>
+                    {{!-- {{/each}} --}}
+       
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{!-- card partials --}}
+
+    <div class="row">
+        <div class="col d-flex flex-wrap justify-content-center">
+            {{!-- need  {{#each}} to dynamically generate each card partial--}}
+            {{!-- need to set their layout to flex - once line fills up, move down to the next line --}}
+
+            {{!-- {{#each card}} --}}
+            <div class="col-3 m-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3 m-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3 m-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3 m-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3 m-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3 m-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3 m-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3 m-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+
+            {{!-- {{/each}} --}}
+        </div>
+    </div>
+
+
+
+
+</div>
+
+<footer id="sticky-footer" class="py-2 bg-dark text-light">
+    <div class="container text-center">
+            <p>Copyright &copy; Your Website</p>
+    </div>
+</footer>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+
+
