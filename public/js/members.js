@@ -5,3 +5,12 @@ $(document).ready(function() {
     $(".member-name").text(data.email);
   });
 });
+
+
+// $(function() {
+//   $(".logged-in").on("click", function(event) {
+//       var id = $(this).data("id");
+//       var loggedIn = $(this).data("loggenIn");
+//       LoggedInMember
+//   })
+// })

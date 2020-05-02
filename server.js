@@ -6,6 +6,8 @@ var exphbs = require("express-handlebars");
 var passport = require("./config/passport");
 
 var yada = "yada";
+
+
 // Setting up port and requiring models for syncing
 var PORT = process.env.PORT || 8080;
 var db = require("./models");
