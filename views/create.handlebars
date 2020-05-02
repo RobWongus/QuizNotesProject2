@@ -18,11 +18,31 @@
                     {{!-- Going to need a class to trigger the  selected category to pull from the API--}}
                     {{!-- this'll need a {{#each block}} to create a link, so we're going to need a dropdown partial --}}
                     
-                    {{!-- {{#each category}} --}}
+                    {{!-- {{#each Categories}} --}}
                         <a class="dropdown-item" href="#">Category1</a>
                         <a class="dropdown-item" href="#">Category2</a>
                         <a class="dropdown-item" href="#">Category3</a>
                     {{!-- {{/each}} --}}
+
+                    <body>
+  <div class="container cards">
+    <div class="row">
+      <div class="col-md-2 col-sm-2">
+        <a class="btn btn-light" href="">New Card</a>
+      </div>
+      <div class="col-md-2 col-sm-2">
+        <a class="btn btn-light" href="">Manage Categories</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 blog-container">
+      </div>
+    </div>
+  </div>
+
+                    {{#each Categories}}
+                    {{name}}
+                    {{/each}}
        
                 </div>
             </div>
