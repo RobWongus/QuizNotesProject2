@@ -22,6 +22,12 @@ module.exports = function(app) {
     res.render(path.join(__dirname, "../views/login"), {});
   });
 
+  app.get('/takequiz', function(req, res){
+   {
+      res.render(path.join(__dirname, "../views/takequiz"))
+    }
+  })
+
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/members", isAuthenticated, function(req, res) {
