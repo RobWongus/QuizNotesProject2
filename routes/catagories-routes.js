@@ -7,7 +7,7 @@ module.exports = function(app){
         }).then(function(dbCategories){
             res.json(dbCategories)
         });
-    })
+    });
 
     app.get("/api/categories/:id", function (req, res){
          db.Categories.findOne({
@@ -20,7 +20,8 @@ module.exports = function(app){
          });
      });
 
-    app.post("api/catagories", function(req, res){
+    app.post("api/categories", function(req, res){
+        console.log(req.body);
         db.Categories.create(req.body).then(function(dbCategories){
             res.json(dbCategories);
         })
