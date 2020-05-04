@@ -1,12 +1,109 @@
+  $(document).ready(function(){
+    // new category variables
+    let categoryId;
+    let categorySelect = $("#category")
+    let categoryNew = $("#newCategory")
 
-$('#exampleModal').on('show.bs.modal', function (event) {
-    var button = $(event.relatedTarget) // Button that triggered the modal
-    // var recipient = button.data('whatever') // Extract info from data-* attributes
-    // // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-    // // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-    // var modal = $(this)
-    // modal.find('.modal-title').text('New message to ' + recipient)
-    // modal.find('.modal-body input').val(recipient)
-  })
+    // new card variables
+    let questionInput = $("#questionInput");
+    let answerInput = $("#answerInput");
+    let cardButton = $("#newCardButton");
+    let newCard = $("#newCardForm")
+    // if(url.indexOf("?card_id=")!==1){
+    //     cardId = url.split("=")[1];
+    //     getCardData(cardId, "card");
+    // }
+    // else if(url.indexOf("?category_id=")!== -1){
+    //     categoryId = url.split("=")[1];
+    // }
 
-  // could set the question /answer id as a data-value, then pull those from the database
+    $(document).on("submit", "#category-form", newCategorySubmit);
+
+    // new card submit button maybe?
+    $(newCard).on("submit", submitNewCard);
+    
+    
+    getCategories();
+// calling categories for dropdowns
+    function getCategories(){
+        $.get("/api/categories", renderCategories)
+
+    }
+
+//talks to db
+    function renderCategories(data){
+        if(!data.length){
+            window.location.href = "/create"
+        }
+        let rowsToAdd = [];
+        for(let i = 0; i < data.length; i++){
+            rowsToAdd.push(createCategoryRow(data[i]));
+        }
+        categorySelect.empty();
+        // console.log(rowsToAdd);
+        // console.log(categorySelect);
+        categorySelect.append(rowsToAdd);
+        categorySelect.val(categoryId);
+        
+    }
+
+    function createCategoryRow(category){
+        let options = $("<option>");
+        options.attr("value", category.id);
+        options.text(category.name);
+        return options;
+    }
+
+    function newCategorySubmit(event){
+        event.preventDefault();
+        if(!categoryNew){
+            return
+        }
+
+        updateCategory({
+            name: categoryNew
+            .val()
+            .trim()
+        });
+    }
+
+    function updateCategory(categoryData){
+        console.log(categoryData);
+        $.post("/api/categories", categoryData)
+        .then(getCategories);
+    };
+
+// creating new card
+    
+    function submitNewCard(){
+        // event.preventDefault();
+        if(!questionInput.val().trim() || !answerInput.val().trim() || categorySelect.val()){
+            return;
+        }
+
+        let newCard = {
+            question: questionInput
+                .val()
+                .trim(),
+            answer: answerInput
+                .val()
+                .trim(),
+            CategoryId: categorySelect.val()
+        };
+        console.log(newCard);
+
+        submitCard(newCard);
+    };
+
+    function submitCard(card){
+        console.log(card);
+        $.post("/api/cards", card)
+        .then(getCategories)
+    };
+
+    // $(".create-card").click(function(event){
+    //     event.preventDefault();
+    //     submitNewCard();
+    // })
+
+});
