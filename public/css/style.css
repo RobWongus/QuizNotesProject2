@@ -19,13 +19,15 @@ form.login {
 
 
 #logout {
-  text-align: right;
-  padding-left: 1100px;
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
   text-decoration: underline;
 }
 
 #jumboone {
-  
+  padding-bottom: -40%;
   text-emphasis: under;
 }
 
