@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(78, 78, 158);
+}
+
 form.signup,
 form.login {
   margin-top: 50px;
@@ -7,3 +11,51 @@ form.login {
   flex-shrink: none;
 }
 
+#flasher {
+  color: crimson;
+  text-align: center;
+  margin: auto;
+}
+
+
+#logout {
+  text-align: right;
+  padding-left: 1100px;
+  text-decoration: underline;
+}
+
+#jumboone {
+  
+  text-emphasis: under;
+}
+
+#jumbotwo {
+  height: 250px;
+}
+
+#jumbothree {
+  text-align: center;
+}
+
+#review {
+  color: crimson;
+  font-size: 36pt;
+}
+
+#jumbofour {
+  text-align: center;
+}
+
+#jumbofive {
+  text-align: center;
+}
+
+#welcome {
+  text-align: center;
+  color: crimson;
+}
+
+#membername {
+  text-align: center;
+  color: crimson;
+}

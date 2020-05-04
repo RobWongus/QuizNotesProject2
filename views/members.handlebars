@@ -1,10 +1,45 @@
-<div class="jumbotron jumbotron-fluid">
+<div id="jumboone" class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4">FLASHER!</h1>
+    <a id="logout" class="navbar-brand" href="/logout">Logout</a>
+    <h1 id="flasher" class="display-4">FLASHE<span style="color:yellow;">Я</span>!</h1>
     <p class="lead"></p>
   </div>
 </div>
-<nav class="navbar navbar-default">
+
+<div id="jumbotwo" class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 id="welcome" class="display-4">Welcome</h1>
+    <p class="lead"></p>
+    <h2 id="membername">Welcome <span class="member-name"></span></h2>
+        {{!-- <a href="/create">Link here</a> --}}
+  </div>
+</div>
+
+<div id="jumbothree" class="jumbotron jumbotron-fluid">
+  <div class="container">
+    {{!-- <h1 class="display-4">Review</h1> --}}
+    <a id="review" class="navbar-brand" href="/review">REVIEW</a>
+    <p class="lead"></p>
+  </div>
+</div>
+
+<div id="jumbofour" class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <a id="review" class="navbar-brand" href="/create">CREATE</a>
+    <p class="lead"></p>
+  </div>
+</div>
+
+<div id="jumbofive" class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <a id="review" class="navbar-brand" href="/takequiz">TAKE QUIZ</a>
+    <p class="lead"></p>
+  </div>
+</div>
+
+
+
+{{!-- <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="/logout">
@@ -12,16 +47,15 @@
       </a>
     </div>
   </div>
-</nav>
-  <div class="container">
+</nav> --}}
+  {{!-- <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <h2>Welcome <span class="member-name"></span></h2>
-        
         <a href="/create">Link here</a>
       </div>
     </div>
-  </div>
+  </div> --}}
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
