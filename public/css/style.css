@@ -29,10 +29,12 @@ form.login {
 #jumboone {
   padding-bottom: -40%;
   text-emphasis: under;
+  
 }
 
 #jumbotwo {
   height: 250px;
+  font-weight: bold;
 }
 
 #jumbothree {
