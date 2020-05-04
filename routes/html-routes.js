@@ -1,6 +1,6 @@
 // Requiring path to so we can use relative routes to our HTML files
 var path = require("path");
-
+var viewsPath = path.join(__dirname, 'views');
 // Requiring our custom middleware for checking if a user is logged in
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 
@@ -32,7 +32,8 @@ module.exports = function(app) {
 
   app.get('/takequiz', function(req, res){
    {
-      res.render(path.join(__dirname, "../views/takequiz"))
+      res.render(path.join(__dirname, "../views/takequiz"));
+      
     }
   })
 
