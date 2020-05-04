@@ -50,14 +50,15 @@ $(document).ready(function(){
             return
         }
 
-        upsertCategory({
+        updateCategory({
             name: categoryNew
             .val()
             .trim()
         });
     }
 
-    function upsertCategory(categoryData){
+    function updateCategory(categoryData){
+        console.log(categoryData);
         $.post("/api/categories", categoryData)
         .then(getCategories);
     };
