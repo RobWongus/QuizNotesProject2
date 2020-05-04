@@ -10,7 +10,9 @@ module.exports = function(sequelize, DataTypes){
         answer: {
             type: DataTypes.TEXT,
             allowNull: false,
-            len: [1]
+            validate: {
+                len: [1]
+            }
         }
     },{
         timestamps: false
