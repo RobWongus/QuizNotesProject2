@@ -1,59 +1,92 @@
 {{!-- navbar with name, sign in/out stuff --}}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="place-content:center">
-  <a class="navbar-brand justify-content-center" href="#">FlashCarder</a>
+    <a class="navbar-brand justify-content-center" href="#">FlashCarder</a>
 </nav>
 
 
- 
+
 {{!-- dropdown for categories --}}
 <div class="container">
     <div class="row mt-2">
         <div class="col d-flex justify-content-center">
             <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Select a Category
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     {{!-- these are going to have to dynamically change based on the number of categories in the category table --}}
                     {{!-- Going to need a class to trigger the  selected category to pull from the API--}}
                     {{!-- this'll need a {{#each block}} to create a link, so we're going to need a dropdown partial --}}
-                    
+
                     {{!-- {{#each Categories}} --}}
-                        <a class="dropdown-item" href="#">Category1</a>
-                        <a class="dropdown-item" href="#">Category2</a>
-                        <a class="dropdown-item" href="#">Category3</a>
+                    <a class="dropdown-item" href="#">Category1</a>
+                    <a class="dropdown-item" href="#">Category2</a>
+                    <a class="dropdown-item" href="#">Category3</a>
                     {{!-- {{/each}} --}}
 
-                    <body>
-  <div class="container cards">
-    <div class="row">
-      <div class="col-md-2 col-sm-2">
-        <a class="btn btn-light" href="">New Card</a>
-      </div>
-      <div class="col-md-2 col-sm-2">
-        <a class="btn btn-light" href="">Manage Categories</a>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 blog-container">
-      </div>
-    </div>
-  </div>
 
-                    {{#each Categories}}
-                    {{name}}
-                    {{/each}}
-       
                 </div>
+
+
+                {{!-- <div class="container blog">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-2">
+                            <a class="btn btn-light" href="/cms">New card</a>
+                        </div>
+                        <div class="col-md-2 col-sm-2">
+                            <a class="btn btn-light" href="/authors">Manage Categories</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 blog-container">
+                        </div>
+                    </div>
+                </div> --}}
+
+                {{#each Categories}}
+                {{name}}
+                {{/each}}
+
+
+                
+
             </div>
         </div>
+
+        {{!-- <input type="text" placeholder="Enter a Question" class="questionInput">
+
+                <input type="text" placeholder="Enter the answer" class="answerInput">
+
+                <button type="submit" class="btn">Create Card</button> --}}
+                
     </div>
 
     {{!-- card partials --}}
 
+    <div>
+        <label for="category">Select Category</label>
+        <select class="custom-select" id="category">
+
+        </select>
+            </div>
+
+    <div>
+        <tbody>
+                    <tr id="form-row">
+                        <form id="category-form">
+                            <td colspan="4">
+                                <input type="text" placeholder="Enter a new Category" id="newCategory">
+                            </td>
+                            <td><button type="submit" class="buttonSubmit">create category</button></td>
+                        </form>
+
+                    </tr>
+                </tbody>
+    </div>
     <div class="row">
         <div class="col d-flex flex-wrap justify-content-center">
-            
+
         </div>
     </div>
 
@@ -64,14 +97,15 @@
 
 <footer id="sticky-footer" class="py-2 bg-dark text-light">
     <div class="container text-center">
-            <p>Copyright &copy; Your Website</p>
+        <p>Copyright &copy; Your Website</p>
     </div>
 </footer>
 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+</script>
+<script type="text/javascript" src="/js/create.js"></script>

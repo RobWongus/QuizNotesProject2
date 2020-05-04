@@ -49,7 +49,7 @@ module.exports = function(app) {
   });
 
   app.get("/create", function(req, res){
-    res.render(path.join(__dirname, "../views/create"),{});
+    res.render(path.join(__dirname, "../views/create"), {});
   });
 
 };
