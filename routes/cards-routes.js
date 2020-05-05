@@ -17,16 +17,13 @@ module.exports = function (app) {
     });
 
     app.get("/api/cards/:id", function (req, res) {
-        db.Cards.findAll({
-            // limit: 10,
+        db.Cards.findOne({
             where: {
-                // id: req.params.id
-                CategoryId: req.params.id
+                id: req.params.id
             },
             include: [db.Categories]
         }).then(function (dbCards) {
             res.json(dbCards);
-            // console.log(dbCards);
         });
     });
 
@@ -35,5 +32,4 @@ module.exports = function (app) {
             res.json(dbCards)
         });
     });
-
 };

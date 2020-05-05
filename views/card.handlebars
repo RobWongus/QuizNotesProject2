@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="place-content:center">
+    <a class="navbar-brand justify-content-center" href="#">FlashCarder</a>
+</nav>
+
+{{!-- section to create a new card  --}}
+<div class="row" id="createCard">
+    <div class="col d-flex flex-wrap justify-content-center">
+        <form id="newCardForm">
+            <tbody><td>
+                <div id="dropDown">
+                    <label for="category">Select Category</label>
+                    <select class="form-control" id="category">
+
+                    </select>
+                </div>
+            </td>
+            <td><input type="text" placeholder="Enter a Question" id="questionInput"></td>
+
+            <td><input type="text" placeholder="Enter the answer" id="answerInput"></td>
+
+            <td><button type="submit" class="create-card">Create Card</button></td>
+            </td></tbody>
+            
+        </form>
+    </div>
+</div>
+
+<a href="/create">add new category</a>
+
+
+
+
+</div>
+
+
+
+<footer id="sticky-footer" class="py-2 bg-dark text-light">
+    <div class="container text-center">
+        <p>Copyright &copy; Your Website</p>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+</script>
+<script type="text/javascript" src="/js/cardFunctions.js"></script>
