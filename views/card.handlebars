@@ -1,31 +1,34 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="place-content:center">
-  <a class="navbar-brand justify-content-center" href="#">FLASHE<span style="color:yellow;">Я</span>!</a>
+    <a class="navbar-brand justify-content-center" href="/members">FLASHE<span style="color:yellow;">Я</span>!</a>
 </nav>
 
 {{!-- section to create a new card  --}}
 <div class="row" id="createCard">
     <div class="col d-flex flex-wrap justify-content-center">
         <form id="newCardForm">
-                <div id="dropDown">
-                    <label for="category">Select Category</label>
-                    <select class="form-control" id="category">
+            <div id="dropDown">
+                <label for="category" class="card-labels">Select Category You Would Like To Add A New Card:</label>
+                <select class="form-control" id="category">
 
-                    </select>
-                </div>
-            
-            <label for="questionInputs">Enter Question</label>
+                </select>
+
+                <p class="card-labels">Click the <a href="/create">here</a> to add a New Category!</p>
+                {{!-- <button></button> --}}
+            </div>
+
+            <label for="questionInputs" class="card-labels">Input Question:</label>
             <textarea type="text" placeholder="What do you need to ask yourself?" id="questionInput"></textarea>
 
-            <label for="answerInput">Enter Answer Here</label>
-                <textarea type="text" placeholder="If your answer isn't 42, you're wrong!" id="answerInput"></textarea>
+            <label for="answerInput" class="card-labels">Input Answer Here:</label>
+            <textarea type="text" placeholder="If your answer isn't 42, you're wrong!" id="answerInput"></textarea>
 
             <button type="submit" class="create-card">Create Card</button>
-            
+
         </form>
     </div>
 </div>
 
-<button><a href="/create">add new category</a></button>
+{{!-- <button><a href="/create">add new category</a></button> --}}
 
 
 
