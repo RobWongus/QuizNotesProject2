@@ -6,25 +6,27 @@ $(document).ready(function () {
     let answerInput = $("#answerInput");
     let cardForm = $("#newCardForm")
 
-    let selectedOption;
-    
+    //event listener 
     $(cardForm).on("submit", submitNewCard);
 
+    //pulls id value for category for submission to cards DB
+    let selectedOption;
     $("select.form-control").change(function () {
         selectedOption = $(this).children("option:selected").val();
         console.log(selectedOption);
         return selectedOption;
     });
 
+    // call to get categories for dropdown menu
     getCategories();
 
-    // calling categories for dropdowns
+    // function for calling categories for dropdowns
     function getCategories() {
         $.get("/api/categories", renderCategories)
 
     };
 
-    //talks to db
+    //renders db categories to page dropdown
     function renderCategories(data) {
         let rowsToAdd = [];
         for (let i = 0; i < data.length; i++) {
