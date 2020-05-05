@@ -17,9 +17,9 @@ module.exports = function (app) {
     });
 
     app.get("/api/cards/:id", function (req, res) {
-        db.Cards.findOne({
+        db.Cards.findAll({
             where: {
-                id: req.params.id
+                CategoryId: req.params.id
             },
             include: [db.Categories]
         }).then(function (dbCards) {
@@ -32,5 +32,4 @@ module.exports = function (app) {
             res.json(dbCards)
         });
     });
-
 };

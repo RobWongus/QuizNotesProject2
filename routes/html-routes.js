@@ -52,4 +52,8 @@ module.exports = function(app) {
     res.render(path.join(__dirname, "../views/create"), {});
   });
 
+  app.get("/card", function(req, res){
+    res.render(path.join(__dirname, "../views/card"), {})
+  })
+
 };
