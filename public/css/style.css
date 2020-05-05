@@ -61,3 +61,21 @@ form.login {
   text-align: center;
   color: crimson;
 }
+
+/* card page */
+
+#dropDown{
+  padding-bottom: 2.5rem;
+}
+
+.card-labels{
+  color: white;
+}
+
+#questionInput, #answerInput{
+  display: block;
+  width: 30rem;
+  resize: none;
+  height: 5rem;
+}
+
