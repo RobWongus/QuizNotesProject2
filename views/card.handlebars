@@ -1,31 +1,31 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="place-content:center">
-    <a class="navbar-brand justify-content-center" href="#">FlashCarder</a>
+  <a class="navbar-brand justify-content-center" href="#">FLASHE<span style="color:yellow;">Я</span>!</a>
 </nav>
 
 {{!-- section to create a new card  --}}
 <div class="row" id="createCard">
     <div class="col d-flex flex-wrap justify-content-center">
         <form id="newCardForm">
-            <tbody><td>
                 <div id="dropDown">
                     <label for="category">Select Category</label>
                     <select class="form-control" id="category">
 
                     </select>
                 </div>
-            </td>
-            <td><input type="text" placeholder="Enter a Question" id="questionInput"></td>
+            
+            <label for="questionInputs">Enter Question</label>
+            <textarea type="text" placeholder="What do you need to ask yourself?" id="questionInput"></textarea>
 
-            <td><input type="text" placeholder="Enter the answer" id="answerInput"></td>
+            <label for="answerInput">Enter Answer Here</label>
+                <textarea type="text" placeholder="If your answer isn't 42, you're wrong!" id="answerInput"></textarea>
 
-            <td><button type="submit" class="create-card">Create Card</button></td>
-            </td></tbody>
+            <button type="submit" class="create-card">Create Card</button>
             
         </form>
     </div>
 </div>
 
-<a href="/create">add new category</a>
+<button><a href="/create">add new category</a></button>
 
 
 
