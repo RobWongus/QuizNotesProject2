@@ -7,6 +7,10 @@ form.login {
   margin-top: 50px;
 }
 
+.navbar-brand {
+  font-size: 28px;
+}
+
 #sticky-footer {
   flex-shrink: none;
 }
@@ -22,7 +26,7 @@ form.login {
   position: absolute;
   top: 8px;
   right: 16px;
-  font-size: 18px;
+  font-size: 12px;
   text-decoration: underline;
 }
 
