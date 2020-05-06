@@ -54,7 +54,7 @@ $(document).ready(function () {
             return;
         }
         console.log(categorySelect);
-        
+
         let newCard = {
             question: questionInput
                 .val()
@@ -69,63 +69,51 @@ $(document).ready(function () {
         submitCard(newCard);
     };
 
-    
 
-    function randomAPICall(event){
+
+    function randomAPICall(event) {
         event.preventDefault();
         console.log("test");
         $.ajax({
             url: 'https://randomuser.me/api/',
             dataType: 'json',
             method: "GET"
-        }).then(function(response) {
-                console.log(response);
-                returnedData = response;
-                let firstName = returnedData.results[0].name.first;
-                let lastName = returnedData.results[0].name.last;
+        }).then(function (response) {
+            console.log(response);
+            returnedData = response;
+            let firstName = returnedData.results[0].name.first;
+            let lastName = returnedData.results[0].name.last;
 
-                let fullName = `${firstName} ${lastName}`
+            let fullName = `${firstName} ${lastName}`
 
-                let city = returnedData.results[0].location.city;
-                let state = returnedData.results[0].location.state;
-                let country = returnedData.results[0].location.country;
-                let postcode = returnedData.results[0].location.postcode;
+            let city = returnedData.results[0].location.city;
+            let state = returnedData.results[0].location.state;
+            let country = returnedData.results[0].location.country;
+            let postcode = returnedData.results[0].location.postcode;
 
-                let address = `${city} ${state}, ${country} ${postcode}`
+            let address = `${city} ${state}, ${country} ${postcode}`
 
-                let email = returnedData.results[0].email;
-                let phoneCell = returnedData.results[0].cell;
-                let phoneLand = returnedData.results[0].phone;
+            let email = returnedData.results[0].email;
+            let phoneCell = returnedData.results[0].cell;
+            let phoneLand = returnedData.results[0].phone;
 
-                let contact = `Email: ${email} \n Cell: ${phoneCell} \nLand: ${phoneLand}`
-                console.log(contact);
-                console.log(fullName);
-                console.log(address);
-                // let personalData =  {
-                //     name : fullName, 
-                //     address: address, 
-                //     contactInfo:  contact }
-                //     console.log(personalData);
-                //  parseRandomApi(personalData);
-                // })
+            let contact = `Email: ${email} \n Cell: ${phoneCell} \nLand: ${phoneLand}`
 
-                let personalData ={
-                    question: fullName,
-                    answer: contact,
-                    CategoryId: selectedOption
-                }
-                console.log(personalData);
-                submitCard(personalData);
-            });
+
+            let personalData = {
+                question: fullName,
+                answer: contact,
+                CategoryId: 1
             }
+            console.log(personalData);
+            submitCard(personalData);
+        });
+    }
 
-            function submitCard(card) {
-                $.post("/api/cards", card)
-                
-                // , function(){
-                //     // window.location.href = "/card";
-                // })
-                console.log(card);
-            };
+    function submitCard(card) {
+        $.post("/api/cards", card, function () {
+            window.location.href = "/card";
+        })
+    };
 
 });
