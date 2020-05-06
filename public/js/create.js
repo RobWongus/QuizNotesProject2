@@ -7,15 +7,16 @@ $(document).ready(function () {
 
     function newCategorySubmit(event) {
         event.preventDefault();
-        if (!categoryNew) {
-            return
-        }
+        if (categoryNew.val() === "") {
+            return 
+        }else{
 
         updateCategory({
             name: categoryNew
                 .val()
                 .trim()
         });
+    }
     }
 
     function updateCategory(categoryData) {
