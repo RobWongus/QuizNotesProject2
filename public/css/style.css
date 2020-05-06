@@ -92,6 +92,7 @@ form.login {
   height: 5rem;
 }
 
+<<<<<<< HEAD
 .card-footer {
   position: static;
   left: 0;
@@ -101,3 +102,12 @@ form.login {
   color: rgb(224, 235, 75);
   text-align: center;
 }
+=======
+/* create category */
+#newCategory{
+  display: block;
+  width: 20rem;
+  height: 2.5rem
+}
+
+>>>>>>> master
