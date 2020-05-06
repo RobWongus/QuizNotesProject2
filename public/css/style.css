@@ -85,3 +85,10 @@ form.login {
   height: 5rem;
 }
 
+/* create category */
+#newCategory{
+  display: block;
+  width: 20rem;
+  height: 2.5rem
+}
+
