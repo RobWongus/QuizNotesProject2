@@ -47,19 +47,19 @@ Technologies used:
 
 ![bioImage](https://avatars0.githubusercontent.com/u/59583325?v=4&s=200)
 
-
+[![](https://img.shields.io/badge/github-vsaleem-brightgreen?style=plastic)](https://www.github.com/vsaleem)
 ![followers](https://img.shields.io/badge/Followers-8-brightgreen)
 ![location](https://img.shields.io/badge/Location-Baltimore_Maryland-blue)
 
 ![bioImage](https://avatars3.githubusercontent.com/u/12203157?v=4&s=200)
 
-
+[![](https://img.shields.io/badge/github-altays-brightgreen?style=plastic)](https://www.github.com/altays)
 ![followers](https://img.shields.io/badge/Followers-10-brightgreen)
 ![location](https://img.shields.io/badge/Location-Baltimore_Maryland-blue)
 
 ![bioImage](https://avatars2.githubusercontent.com/u/59449041?v=4&s=200)
 
-
+[![](https://img.shields.io/badge/github-nrlong-brightgreen?style=plastic)](https://www.github.com/nrlong)
 ![followers](https://img.shields.io/badge/Followers-11-brightgreen)
 ![location](https://img.shields.io/badge/Location-Maryland-blue)
 
@@ -82,6 +82,6 @@ Technologies used:
 
 ![bioImage](https://avatars3.githubusercontent.com/u/59811683?v=4&s=200)
 
-
+[![](https://img.shields.io/badge/github-robwongus-brightgreen?style=plastic)](https://www.github.com/robwongus)
 ![followers](https://img.shields.io/badge/Followers-7-brightgreen)
 ![location](https://img.shields.io/badge/Location-null-blue)
