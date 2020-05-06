@@ -30,17 +30,14 @@ form.login {
   text-decoration: underline;
 }
 
-#jumboone {
+/* #jumboone {
   padding-bottom: -40%;
   text-emphasis: under;
-  }
+  } */
 
 #jumbotwo {
   height: 250px;
-  
-  
   background-color: rgb(17, 29, 74);
-  
 }
 
 #welcome {
