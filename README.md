@@ -22,13 +22,15 @@ SO THAT I CAN learn the subject more easily
 A group project that was inspired by wanting to be able to study notes in a flash card style, but be able to add your own to cater to your study style. 
 
 Technologies used:
-```
-Node.js
-Express.js
-Sequelize
-Express-Handlebars
-Deployed to Heroku  
-```
+
+* Bootstrap CSS
+* [3rd Pary API used for demo purposes](https://randomuser.me/)
+* Node.js
+* Express.js
+* Sequelize
+* Express-Handlebars
+* Deployed to Heroku  
+
 ## Installation
 
     npm install
@@ -67,11 +69,11 @@ Deployed to Heroku
 
 ## Future Updates 
 
-    *Updating cards and categories in review page
-    *Giving the “take quiz” and “review pages” a note card layout
-    *Individualized database per login vs universal 
-    *Importing / sharing quizzes
-    *Adding note cards back into pool (or “reshuffling”)
+* Updating cards and categories in review page
+* Giving the “take quiz” and “review pages” a note card layout
+* Individualized database per login vs universal 
+* Importing / sharing quizzes
+* Adding note cards back into pool (or “reshuffling”)
 
 
 ## Email
