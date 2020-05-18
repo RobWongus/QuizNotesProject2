@@ -1,10 +1,12 @@
 body {
   background-color: rgb(135, 137, 192);
+  
 }
 
 form.signup,
 form.login {
   margin-top: 50px;
+  color: yellow;
 }
 
 .navbar-brand {
@@ -15,13 +17,6 @@ form.login {
   flex-shrink: none;
 }
 
-/* #flasher {
-  color: crimson;
-  text-align: center;
-  margin: auto;
-} */
-
-
 #logout {
   position: absolute;
   top: 8px;
@@ -29,11 +24,6 @@ form.login {
   font-size: 12px;
   text-decoration: underline;
 }
-
-/* #jumboone {
-  padding-bottom: -40%;
-  text-emphasis: under;
-  } */
 
 #jumbotwo {
   height: 250px;
@@ -89,7 +79,6 @@ form.login {
   height: 5rem;
 }
 
-<<<<<<< HEAD
 .card-footer {
   position: static;
   left: 0;
@@ -99,7 +88,6 @@ form.login {
   color: rgb(224, 235, 75);
   text-align: center;
 }
-=======
 /* create category */
 #newCategory{
   display: block;
@@ -107,4 +95,3 @@ form.login {
   height: 2.5rem
 }
 
->>>>>>> master
